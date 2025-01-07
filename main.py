@@ -8,7 +8,7 @@ import click
 @click.argument("output_image_path", type=click.Path())
 @click.argument("num_tiles", type=int)
 @click.argument("tile_width", type=int)
-@click.option("--quality", "-q", type=click.IntRange(1, 100), default=100, help="The quality of the output image. From 1 (worst) to 100 (best).")
+@click.option("--quality", "-q", type=click.IntRange(1, 100), default=60, help="The quality of the output image. From 1 (worst) to 100 (best).")
 def main(target_image_path, tiles_dir, output_image_path, num_tiles, tile_width, quality):
     """
     Generate a mosaic image by tiling a target image using smaller images.
