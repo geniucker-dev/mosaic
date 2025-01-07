@@ -55,7 +55,7 @@ class Mosaic:
             tile = Tile()
             tile.read(tile_path, self.__tile_width)
             return tile
-        MAX_WORKERS = 16
+        MAX_WORKERS = os.cpu_count()
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
             # submit tasks
             futures = [executor.submit(load_tile, path) for path in paths]
