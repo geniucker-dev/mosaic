@@ -1,6 +1,10 @@
 import numpy as np
 from PIL import Image as PILImage
+from pillow_heif import register_heif_opener, register_avif_opener
 from scipy.spatial import KDTree
+
+register_heif_opener()
+register_avif_opener()
 
 class Image:
     def __init__(self, width: int = 0, height: int = 0):
