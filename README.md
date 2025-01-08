@@ -19,12 +19,11 @@ Make sure you have Python 3 installed.
 
 target
 
-![image](https://github.com/user-attachments/assets/7a34b9e3-4568-430b-b2ec-e6fcca9da596)
+![image](https://github.com/user-attachments/assets/9914ac18-0a63-4599-bd7f-2d49c0b09400)
 
 mosaic
 
-![image](https://github.com/user-attachments/assets/5bf7d43b-932c-4201-93fd-632221109180)
-
+![image](https://github.com/user-attachments/assets/79655cfe-2a60-4890-8c71-c35913650f57)
 
 detail
 
