@@ -11,9 +11,49 @@ This is a simple Python script that creates a [photomosaic](https://en.wikipedia
 
 Make sure you have Python 3 installed.
 
-1. Clone the repository.
-2. Install the required packages using `pip install -r requirements.txt`.
-3. Run the script using `python main.py --help` for details on how to use it.
+```bash
+pip install git+https://github.com/geniucker-dev/mosaic
+```
+
+### Use as a script
+
+Run `python -m mosaic --help` to see the help message.
+
+```
+Usage: python -m mosaic [OPTIONS] TARGET_IMAGE_PATH TILES_DIR
+                        OUTPUT_IMAGE_PATH NUM_TILES TILE_WIDTH
+
+  Generate a mosaic image by tiling a target image using smaller images.
+
+  TARGET_IMAGE_PATH: The path to the target image.
+  TILES_DIR: The directory containing the tile images.
+  OUTPUT_IMAGE_PATH: The path to save the mosaic image.
+  NUM_TILES: The number of tiles to be placed along the shorter side of the target image.
+  TILE_WIDTH: The width of each tile in pixels.
+
+Options:
+  -q, --quality INTEGER RANGE  The quality of the output image. From 1 (worst)
+                               to 100 (best).  [1<=x<=100]
+  --help                       Show this message and exit.
+```
+
+### Use as a module
+
+Example usage:
+
+```python
+from mosaic import Mosaic
+
+
+mosaic = Mosaic(
+    num_tiles=100, # The number of tiles to be placed along the shorter side of the target image.
+    tile_width=50 # The width of each tile in pixels.
+)
+mosaic.set_target_image("path/to/target/image.jpg")
+mosaic.load_tiles("path/to/tiles/directory")
+mosaic.create_mosaic()
+mosaic.save_mosaic("path/to/output/image.jpg", quality=90) # The quality of the output image. From 1 (worst) to 100 (best).
+```
 
 ## Example
 

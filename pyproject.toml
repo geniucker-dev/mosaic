@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "mosaic"
+version = "0.1.0"
+description = "A Python script to create photomosaic."
+authors = ["geniucker-dev <mail@geniucker.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.8"
+numpy = "^2.2.1"
+pillow = "^11.0.0"
+pillow-heif = "^0.21.0"
+scipy = "^1.14.1"
+tqdm = "^4.67.1"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.13.2"
+
+[tool.isort]
+profile = "black"
+atomic = true
+skip_gitignore = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend= "poetry.core.masonry.api"

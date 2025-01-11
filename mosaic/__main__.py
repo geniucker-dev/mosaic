@@ -1,6 +1,7 @@
+import click
+
 from mosaic import Mosaic
 
-import click
 
 @click.command()
 @click.argument("target_image_path", type=click.Path(exists=True))
@@ -20,10 +21,12 @@ def main(target_image_path, tiles_dir, output_image_path, num_tiles, tile_width,
     NUM_TILES: The number of tiles to be placed along the shorter side of the target image.
     TILE_WIDTH: The width of each tile in pixels.
     """
-    mosaic = Mosaic(target_image_path, tiles_dir, output_image_path, num_tiles, tile_width, quality)
-    mosaic.load_tiles()
+    mosaic = Mosaic(num_tiles, tile_width)
+    mosaic.set_target_image(target_image_path)
+    mosaic.load_tiles(tiles_dir)
     mosaic.create_mosaic()
-    mosaic.save_mosaic()
+    mosaic.save_mosaic(output_image_path, quality=quality)
+
 
 if __name__ == "__main__":
     main()

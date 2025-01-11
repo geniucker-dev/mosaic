@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image as PILImage
-from pillow_heif import register_heif_opener, register_avif_opener
+from pillow_heif import register_avif_opener, register_heif_opener
 from scipy.spatial import KDTree
 
 register_heif_opener()
