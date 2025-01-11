@@ -11,8 +11,16 @@ This is a simple Python script that creates a [photomosaic](https://en.wikipedia
 
 Make sure you have Python 3 installed.
 
+Install the package using pip:
+
 ```bash
 pip install git+https://github.com/geniucker-dev/mosaic
+```
+
+or if you want to use ssh
+
+```bash
+pip install git+ssh://git@github.com/geniucker-dev/mosaic
 ```
 
 ### Use as a script
